@@ -27,8 +27,6 @@ consejos = ["Trata de evitar tirar residuos quimicos al agua",
             "usa la lavadora cuando este a capacidad maxima"
             ]
 
-
-
 @bot.event
 async def on_ready():
     print(f'We have logged in as{bot.user}')
@@ -42,7 +40,6 @@ async def ayuda(ctx):
     await ctx.send("Hola los comandos son:")
     await ctx.send(comandos)
     
-
 @bot.command()
 async def agua(ctx):
     consejo = random.choice(consejos)
