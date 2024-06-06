@@ -1,0 +1,80 @@
+import discord
+from discord.ext import commands
+import os, random
+import requests
+from informacion import *
+
+plantas = [
+     {
+        "nombre_cientifico": datos("nombre_cientifico", "menta") ,
+        "nombre_comun": datos("nombre_comun", "menta")  ,
+        "clima": datos("clima", "menta") ,
+        "descripcion" : datos("descripcion", "menta") ,
+        "cultivo": datos("cultivo", "menta") ,
+        "usos": datos("usos", "menta") ,
+        "plagas_enfermedades": datos("plagas_enfermedades", "menta")
+    },
+    {
+        "nombre_cientifico": datos("nombre_cientifico", "lavanda"),
+        "nombre_comun": datos("nombre_comun", "lavanda") ,
+        "clima": datos("clima", "lavanda") ,
+        "descripcion" : datos("descripcion", "lavanda") ,
+        "cultivo": datos("cultivo", "lavanda") ,
+        "usos": datos("usos", "lavanda") ,
+        "plagas_enfermedades": datos("plagas_enfermedades", "lavanda")
+    },
+    {
+        "nombre_cientifico": datos("nombre_cientifico", "tomate") ,
+        "nombre_comun": datos("nombre_comun", "tomate") ,
+        "clima": datos("clima", "tomate") ,
+        "descripcion" : datos("descripcion", "tomate") ,
+        "cultivo": datos("cultivo", "tomate") ,
+        "usos": datos("usos", "tomate") ,
+        "plagas_enfermedades": datos("plagas_enfermedades", "tomate")
+    }
+    
+]
+
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='!', intents=intents)
+
+@bot.event
+async def on_ready():
+    print(f'We have logged in as {bot.user}')
+
+def get_duck_image_url():
+    url = 'https://random-d.uk/api/random'
+    res = requests.get(url)
+    data = res.json()
+    return data['url']
+
+@bot.command('duck')
+async def duck(ctx):
+    '''The duck command returns the photo of the duck'''
+    print('hello')
+    image_url = get_duck_image_url()
+    await ctx.send(image_url)
+
+@bot.command()
+async def check(ctx, planta):
+    if ctx.message.attachments:
+        for attachment in ctx.message.attachments:
+            file_name = attachment.filename
+            file_url = attachment.url
+            await attachment.save(f"./{attachment.filename}")
+            #await ctx.send(get_class(model_path="./keras_model.h5", labels_path="labels.txt", image_path=f"./{attachment.filename}"))
+   
+    else:
+        await ctx.send("You forgot to upload the image :(")
+
+    plants = ["menta", "lavanda", "tomate"]
+    if planta in plants:
+        #print(mostrar(busqueda(planta, plantas)))
+        await ctx.send(mostrar(busqueda(planta, plantas)))
+    else:
+        await ctx.send("no tenemos esa planta en nuesta base de datos :) :( ")
+        
+
+bot.run('TOKEN')
