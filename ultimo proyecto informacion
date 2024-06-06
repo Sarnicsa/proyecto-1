@@ -1,0 +1,126 @@
+def datos(categoria, planta):
+    global msg
+    msg = ""
+    #menta
+    if planta == "menta":
+        
+        if categoria == "nombre_cientifico":
+            msg = "Mentha spicata"
+
+        if categoria == "nombre_comun":
+            msg = "menta"
+
+        if categoria == "clima":
+            msg = "Templado, cálido, y frio"
+
+        if categoria == "plagas_enfermedades":
+            msg = """Áfidos, ácaros, Escarabajos de pulgas, Orugas y Gusanos cortadores"""
+
+        if categoria == "descripcion":
+            msg = """Es una planta suave, no leñosa que crece hasta 30 cm de altura. 
+                    Las hojas de menta son muy aromáticas, alargadas, de forma ovalada, con margen aserrado y parte inferior rugosa sin pelo. 
+                    Su color varía de claro a verde medio. El tallo es redondeado."""
+        
+        if categoria == "cultivo":
+            msg = """Crece y se propaga muy rápido ya que tiene raíces invasivas largas. La menta puede crecer en puro sol o en semisombra.  
+                    En las regiones tropicales o durante la estación muy calurosa, debe tener solo 4 horas de sol ya que el calor quema las hojas. 
+                    La mejor temperatura para la menta es de alrededor de 21°C. Es moderadamente tolerante al frío. 
+                    También crece en temperaturas cálidas pero puede deshidratarse. Prefiere crecer en un suelo bien drenado, húmedo y rico en nutrientes.
+                    Siembra durante la primavera directamente en macetas o en el suelo. Se pueden comenzar a cosechar hojas y tallos de preferencia tres meses después de la siembra. 
+                    Para propagar la menta, simplemente corte los tallos de unos 7-8 cm de largo, debajo de una parte donde crece una hoja en la planta."""
+        
+        if categoria == "usos":
+            msg = """Uno de los principales beneficios de cultivar menta en jardines es que ayuda a prevenir plagas que ataca otras plantas.
+                    Se puede utilizar en té, agua, ensaladas y como condimento para la comida. Tiene uso medicinal para combatir problemas digestivos como dolor de estómago y gastritis. 
+                    Otro de los beneficios de esta planta es que atrae a los insectos polinizadores, estos polinizadores ayudan en el huerto para tener mejores cosechas."""
+    #lavanda
+    if planta == "lavanda":
+        
+        if categoria == "nombre_cientifico":
+            msg = "Lavandula angustifolia"
+        
+        if categoria == "nombre_comun":
+            msg = "Lavanda"
+
+        if categoria == "clima":
+            msg = "Cálido y templado"
+        
+        if categoria == "plagas_enfermedades":
+            msg = """Esta planta no se ataca por insectos, pero es vulnerable a los hongos si hay falta de drenaje del suelo."""
+
+        if categoria == "descripcion":
+            msg = """La lavanda es un arbusto que crece hasta un metro de altura. Tiene el tallo muy ramificado y grisáceo. 
+                    El tallo es leñoso, perenne, aromático. Las hojas son pequeñas y muy aromáticas. 
+                    Las flores son utilizadas por sus propiedades medicinales."""
+            
+        if categoria == "cultivo":
+            msg = """Se puede reproducir por semilla, pero es más fácil hacerlo tomando esquejes de sus tallos. Se reproduce por esquejes tomados de las puntas de las ramas o de los nudos de la hoja.
+                    Se planta en almácigo , comprimiendo la tierra alrededor del esqueje, dándole agua solo cuando se seque. 
+                    El esqueje puede tardar entre cuatro o seis semanas en enraizarse. Cuando haya resistencia al jalar un poco la parte arriba, pueden ser trasplantadas a su lugar permanente.
+                    Para cosechar se deben cortar los tallos hasta la base cuando la mitad de las flores están abiertas. 
+                    Las hojas pueden ser utilizadas en cualquier momento. Los aceites esenciales se extraen de flores frescas, pero los tallos deben ser agrupados y secados al revés en un lugar oscuro y seco."""
+            
+        if categoria == "usos":
+            msg = """Las hojas y flores de la lavanda son comestibles. Pueden darle sabor a varios jugos y también postres o añadido a salsas. 
+                    atrae a muchos polinizadores. 
+                    Esta flor ayuda en problemas físicos y emocionales; por su aroma especial se usa en colonias y perfumes. 
+                    El aceite esencial que se extrae de ella es utilizado para dolores musculares y migrañas, quemaduras, heridas, alergias, cuidado de la piel. 
+                    Se utiliza en infusión para las migrañas producto del agotamiento nervioso, si toma una taza antes de acostarse, puede ayudar a aliviar el insomnio. 
+                    Resulta apropiada como digestivo después de comer. Se puede tomar una cucharadita al día para la depresión o la tensión nerviosa, aunque también sirve para calmar el asma y para el estrés.
+                    Es muy conocida como desinflamante, desinfectante natural, muy efectiva a la hora de tratar problemas de acné, cicatrizar, desinfectar heridas y ser un buen paliativo de enfermedades reumáticas."""
+    #tomate
+    if planta == "tomate":
+        
+        if categoria == "nombre_cientifico":
+            msg = "Solanum lycopersicum"
+
+        if categoria == "nombre_comun":
+            msg = "tomate"
+
+        if categoria == "clima":
+            msg = "Fresco y cálido"
+        
+        if categoria == "plagas_enfermedades":
+            msg = """pulgón, gusano cuerno,las moscas blancas, babosas, caracoles, bacterias, tizón, mildiú, marchitez y pudrición de la raíz."""
+
+        if categoria == "descripcion":
+            msg = """El tomate es una planta de bayas rojas de la familia de las solanáceas. Crece hasta tres metros de altura. Tiene ramas que suelen ser débiles y necesitan apoyo para crecer. 
+                    Tiene hojas compuestas y peludas, que pueden alcanzar hasta 45 cm de longitud, y tienen un olor fuerte. Las flores son pequeñas y amarillas, crecen en racimos colgantes. 
+                    Los frutos son generalmente de color rojo y pueden crecer hasta 7 cm de diámetro. Aunque es una fruta, el tomate se considera comúnmente una verdura, ya que se usa principalmente en platos salados en lugar de dulces. 
+                    Hay muchas variedades diferentes de tomates, por lo que pueden tener una variedad de colores y formas.
+                    existen dos tipos de plantas estas son determinada e indeterminada. 
+                    Los tomates determinados se llaman así porque crecen a una altura predeterminada, generalmente alrededor de un metro, y dejan de crecer cuando se producen flores y frutos en la punta.
+                    Los tomates de esta variedad tienden a madurar más o menos al mismo tiempo durante un período de dos semanas. 
+                    Los tomates indeterminados están más relacionados con sus antepasados, por lo tanto, pueden cultivarse como plantas perennes. Pueden florecer y producir frutos durante toda la temporada. 
+                    Sus flores crecen en las ramas laterales pero no en las puntas. Estas plantas pueden crecer hasta tres metros y necesitan apoyo o marcos para crecer."""
+    
+        if categoria == "cultivo":
+            msg = """Los tomates se pueden cultivar en casi cualquier lugar. Los tomates no toleran las heladas y crecen mejor al sol directo.
+                    Si está cultivando tomates en áreas afectadas por las heladas, debe plantarlos en el interior, uego se pueden trasplantar. 
+                    Se deben colocar estacas o marcos para apoyar el crecimiento de las plantas en este momento para evitar daños posteriores a las raíces. Después del trasplante. 
+                    La cosecha dependerá de si cultiva tomates determinados o indeterminados. Básicamente, los tomates están listos para coger cuando hayan obtenido un color intenso y estén firmes."""
+    
+        if categoria == "usos":
+            msg = """Los tomates se comen crudos en ensaladas, como verdura cocida, se pueden encurtir, secar al sol o usar en jugos, sopas, salsas y purés.
+                    Los tomates contienen antioxidantes, que según algunos estudios reducen el riesgo de enfermedades cardíacas y varios cánceres. 
+                    Son buenos para la piel. Son una excelente fuente de vitaminas C, K, y potasio.  
+                    Los tomates contienen aproximadamente un 95%, de agua y el otro 5%, contiene carbohidratos y fibra."""
+
+    return msg
+
+def mostrar(dato):
+    return f"""nombre: {dato["nombre_comun"]}
+            descricion: {dato["descripcion"]}
+            nombre_c : {dato["nombre_cientifico"]}
+            clima : {dato["clima"]}
+            cultivo : {dato["cultivo"]}
+            usos : {dato["usos"]}
+            PYE : {dato["plagas_enfermedades"]}"""
+
+def busqueda(nombre_comun, plantas):
+
+    encontrar = {}
+    for planta in plantas:
+        if  planta["nombre_comun"] == nombre_comun:
+            encontrar = planta
+    return encontrar
